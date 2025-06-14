@@ -117,15 +117,45 @@ p {
 }
 
 /* Laptop Cards Section */
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
-.card-body {
-  display: flex;
-  flex-direction: column;
-}
+  .card-img-wrapper {
+    height: 240px; /* ✅ Increased from 180px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    overflow: hidden;
+  }
 
-.card-body .mt-auto {
-  margin-top: auto;
-}
+  .card-img-wrapper img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* ✅ Keeps image ratio, fits nicely */
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .card-title {
+    min-height: 3em;
+  }
+
+  .card-price {
+    margin-top: auto;
+  }
+
+  .btn {
+    width: 100%;
+  }
+ 
 
 /* Footer */
 
@@ -212,6 +242,23 @@ em {
     width: 100%;
     height: auto;
   }
+
+
+  .card-img-wrapper {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #f8f9fa; /* Optional for consistent background */
+}
+
+.card-img-wrapper img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
 
   /* Adjust footer social icons size */
   .social {
